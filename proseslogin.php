@@ -12,9 +12,11 @@
     else {
         if($pass <> $hasil['password_cust']) {
             echo "<div align='center'>Password salah! <a href='login.php'>Back</a></div>";
+            echo $hasil['nama_cust'];
         } 
         else {
             $_SESSION['username'] = $hasil['username'];
+            $_SESSION['nama_cust'] = $hasil['nama_cust'];
             header('location:index.php');
         }
    }
